@@ -1,0 +1,170 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    position: relative;
+   
+
+
+}
+body {
+    display: block;
+    margin: 0px;
+    height: 1500px;
+}
+.ulDiv{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.line1{
+    margin-left: 20px;
+}
+
+.burger{
+    width: 50px;
+    height: 50px;
+    /* border: solid ; */
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    display: none;
+
+}
+
+.line{
+    width: 90%;
+    height: 3px;
+    position: absolute;
+    background-color: black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: all 1s;
+
+}
+.line2{
+    top: 30%;
+}
+.line4{
+    top: 70%;
+}
+
+.burgeractive .line2{
+    top: 50%;
+    transform: translate(-50%,-50%) rotate(45deg);
+}
+.burgeractive .line4{
+    top: 50%;
+    transform: translate(-50%,-50%) rotate(-45deg);
+
+}
+.burgeractive .line3{
+    display: none;
+}
+
+
+@media (max-width:780px){
+    .burger{
+display: block;
+    }
+    .navigation{
+        display: none;
+    }
+    .navigation.active{
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 40%; 
+    }
+    .navigation.active .ulDiv{
+        flex-direction: column;
+       
+    }
+    .header.activeHeader{
+        width: 100%;
+        height: 100vh;
+        background-color: burlywood;
+    }
+}
+/* me2 davaleba */
+.form{
+    margin-top: 50px;
+    margin-left: 20px;
+}
+.clear{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.inputText:focus{
+    outline: none;
+}
+
+/* accordion styles */
+
+.accordionBody{
+    max-width: 800px;
+    width: 100%;
+    margin: 50px auto;
+    padding-top:200px ;
+}
+
+.container{
+    margin-bottom: 20px;
+    background-color: beige;
+    border-radius: 5px;
+    padding: 10px;
+    position: relative;
+}
+
+.text{
+    display: none;
+}
+.activeContainer .text{
+    display: block;
+}
+.icon1{
+    position: absolute;
+    top: 35px;
+    right: 30px;
+}
+.icon2{
+    position: absolute;
+    top: 35px;
+    right: 30px;
+    display: none;
+}
+/* .container.activeContainer .icon1{
+    display: none;
+}
+.container.activeContainer .icon2{
+    display: block;
+} */
+.scroll{
+    width: 90px;
+    padding: 5px;
+    border: 2px solid;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
+    
+}
+.scroll:hover{
+cursor: pointer;
+}
+
+.mainHeader{
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    background-color: burlywood;
+}
+
+.mainHeader.actiuri{
+    background-color: rgb(166, 51, 51);
+    transition: all 1s;
+}
